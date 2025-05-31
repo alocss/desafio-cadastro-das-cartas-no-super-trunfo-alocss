@@ -1,46 +1,91 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char estado;         
-    char codCarta[3];    
-    char nomeCidade[50]; 
-    int populacao;
+    // Declaração das variáveis para a carta 1
+    char estado1;
+    char codigo1[4];
+    char nomeCidade1[50];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
+
+    // Declaração das variáveis para a carta 2
+    char estado2;
+    char codigo2[4];
+    char nomeCidade2[50];
+    int populacao2;
     float area2;
-    float pib;
-    int numeroPontosTuristico;
+    float pib2;
+    int pontosTuristicos2;
 
-    printf("Digite uma letra de 'A' a 'H' que corresponde ao seu estado: \n");
-    scanf(" %c", &estado);  
+    // Entrada de dados da carta 1
+    printf("Cadastro da Carta 1:\n");
 
-    printf("Digite um número de 01 a 04 referente ao código da sua Carta: \n");
-    scanf("%2s", codCarta);  
+    printf("Informe o estado (A-H): ");
+    scanf(" %c", &estado1);
 
-    printf("Dgite o nome da sua cidade \n");
-    scanf("%s", &nomeCidade);
+    printf("Informe o código da carta (ex: A01): ");
+    scanf("%s", codigo1);
 
-    printf("Digite o número de habitantes da cidade: \n");
-    scanf("%d", &populacao);
+    printf("Informe o nome da cidade: ");
+    scanf(" %[^\n]", nomeCidade1);  // Lê string com espaços
 
-    printf("Digite a área da cidade (km²): \n");
+    printf("Informe a população da cidade: ");
+    scanf("%d", &populacao1);
+
+    printf("Informe a área da cidade (em km²): ");
+    scanf("%f", &area1);
+
+    printf("Informe o PIB da cidade (em bilhões de reais): ");
+    scanf("%f", &pib1);
+
+    printf("Informe o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos1);
+
+    // Entrada de dados da carta 2
+    printf("\nCadastro da Carta 2:\n");
+
+    printf("Informe o estado (A-H): ");
+    scanf(" %c", &estado2);
+
+    printf("Informe o código da carta (ex: B03): ");
+    scanf("%s", codigo2);
+
+    printf("Informe o nome da cidade: ");
+    scanf(" %[^\n]", nomeCidade2);  // Lê string com espaços
+
+    printf("Informe a população da cidade: ");
+    scanf("%d", &populacao2);
+
+    printf("Informe a área da cidade (em km²): ");
     scanf("%f", &area2);
 
-    printf("Digite qual o valor do Produto Interno Bruto (PIB) da cidade: \n");
-    scanf("%f", &pib);
+    printf("Informe o PIB da cidade (em bilhões de reais): ");
+    scanf("%f", &pib2);
 
-    printf("Digite o número de pontos turísticos: \n");
-    scanf("%d", &numeroPontosTuristico);
-   
+    printf("Informe o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos2);
 
-    
-    printf("\n=== Carta 1 ===\n");
-    printf("Estado: %c\n", estado);
-    printf("Código da Carta: %c%s\n", estado, codCarta);
-    printf("Nome da Cidade: %s\n", nomeCidade);
-    printf("População: %d\n", populacao);
+    // Exibição dos dados da carta 1
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da Cidade: %s\n", nomeCidade1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+
+    // Exibição dos dados da carta 2
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da Cidade: %s\n", nomeCidade2);
+    printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f\n", pib);
-    printf("Número de Pontos Turísticos: %d\n", numeroPontosTuristico);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
 
     return 0;
 }
